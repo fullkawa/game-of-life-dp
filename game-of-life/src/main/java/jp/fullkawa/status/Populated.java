@@ -20,4 +20,8 @@ public class Populated implements CellStatus {
 		return this;
 	}
 
+	public boolean isPopulated() {
+		return true;
+	}
+
 }

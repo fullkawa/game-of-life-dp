@@ -2,6 +2,12 @@ package jp.fullkawa;
 
 import java.util.ArrayList;
 
+/**
+ * 周囲のセル
+ *
+ * @author y.furukawa
+ *
+ */
 public class Neighbors extends ArrayList<Cell> {
 
 	public int getPopulatedNum() {

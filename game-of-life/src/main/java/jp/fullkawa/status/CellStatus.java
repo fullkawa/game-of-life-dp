@@ -12,5 +12,6 @@ import jp.fullkawa.Neighbors;
 public interface CellStatus {
 
 	public String toString();
+	public boolean isPopulated();
 	public CellStatus getNextStatus(Neighbors neighbors);
 }

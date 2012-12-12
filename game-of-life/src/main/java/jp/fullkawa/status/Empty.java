@@ -15,4 +15,8 @@ public class Empty implements CellStatus {
 		return this;
 	}
 
+	public boolean isPopulated() {
+		return false;
+	}
+
 }

@@ -12,8 +12,8 @@ public class GameOfLife {
 	 * @throws InterruptedException
 	 */
 	public static void main(String[] args) throws Exception {
-		//String strategy = "jp.fullkawa.strategy.CheckPattern";
-		String strategy = "jp.fullkawa.strategy.RandomPattern";
+		String strategy = "jp.fullkawa.strategy.CheckPattern";
+		//String strategy = "jp.fullkawa.strategy.RandomPattern";
 		Generation gen = new Generation(WIDTH, HEIGHT
 			, (PatternStrategy)Class.forName(strategy).newInstance());
 		while (true) {

@@ -1,7 +1,6 @@
 package jp.fullkawa;
 
 import jp.fullkawa.status.CellStatus;
-import jp.fullkawa.status.Populated;
 
 public class Cell {
 
@@ -12,14 +11,23 @@ public class Cell {
 	}
 
 	public boolean isPopulated() {
+		/*
 		if (this.status instanceof Populated) {
 			return true;
 		}
 		return false;
+		 */
+		return this.status.isPopulated();
 	}
 
 	@Override
 	public String toString() {
-		return status.toString();
+		return this.status.toString();
+	}
+
+	public Cell getNextCell(Neighbors neighbors) {
+		CellStatus nextStatus = this.status.getNextStatus(neighbors);
+		Cell nextCell = new Cell(nextStatus);
+		return nextCell;
 	}
 }
